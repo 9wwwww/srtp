@@ -27,19 +27,16 @@ module rmsnorm_2blk #(
     output                              			     m_last
 );
 
-reg [1:0] state; //状态寄存器
-localparam ST_COLLECT = 2'd0;  //输入
-localparam ST_REDUCE  = 2'd1;  //计算
-localparam ST_OUTPUT  = 2'd2;  //输出
-
+reg input_done;         //输入完成标志
+reg calc_done;          //归一化系数计算完成标志
 
 reg [3:0] collect_cnt;  //输入计数器：0~13，标记当前是第几拍输入
 reg [3:0] output_cnt;   //输出计数器：0~13，标记当前是第几拍输出
-reg [47:0] sum_sq;
-reg [47:0] final_sum_sq;
-reg [15:0] inv_rms;
-reg inv_rms_start;		//计算开始信号
-reg inv_rms_valid;		//计算完成信号
+reg [47:0] sum_sq;		//累加平方和寄存器
+reg [47:0] final_sum_sq;//最终平方和寄存器
+reg [15:0] inv_rms;		//归一化系数寄存器
+reg inv_rms_start;		//归一化计算开始信号
+reg inv_rms_valid;		//归一化计算完成信号
 
 // 输出端口寄存器
 reg s_ready;
@@ -50,16 +47,23 @@ reg m_last;
 always @(posedge clk,negedge rst_n)begin
 	if(!rst_n)begin
 		m_valid<=0;
-		state <= ST_COLLECT;
         collect_cnt <= 4'd0;
         output_cnt <= 4'd0;
         sum_sq <= 48'd0;
         inv_rms_start <= 1'b0;
+        input_done <= 1'b0;
+        calc_done <= 1'b0;
+        s_ready <= 1'b1;
+        m_last <= 1'b0;
 	end
 	else begin
-		
+		if(s_valid&&s_ready)begin
+			for(i=0;i<BLOCKS_PER_CYCLE*LANES*DATA_W;i=i+1)begin
+				sum_sq=sum_sq+s_mant[i]*s_mant[i];
+			end
+		end
 	end
-end
 
+end 
 
 endmodule
