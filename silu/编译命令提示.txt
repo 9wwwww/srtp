@@ -1,0 +1,3 @@
+iverilog -o sim.out tb.sv dut.sv
+vvp sim.out
+gtkwave wave.vcd

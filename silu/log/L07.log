@@ -1,0 +1,16 @@
+=== SiLU ROM on real dataset ===
+stimulus : stimulus/stim_L07_in.hex
+expected : stimulus/stim_L07_out.hex
+lut      : silu_lut_q11.hex
+FRAC     : 11   BOUND : +/-16384   vectors : 4864   tol : 2 LSB
+
+
+=== SUMMARY ===
+vectors          : 4864
+mismatch (>2 LSB): 0
+  in LUT region  : 0
+  in neg sat     : 0  (of 0 inputs)
+  in pos sat     : 0  (of 0 inputs)
+max abs error    : 1 LSB @ idx=6
+  at that point  : in=-306 hw=-142 exp=-141
+verdict          : PASS

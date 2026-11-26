@@ -1,0 +1,406 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "14.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2009.vpi";
+S_00000205B83B6280 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_00000205B8360570 .scope module, "tb_silu" "tb_silu" 3 5;
+ .timescale -9 -12;
+P_00000205B838BE70 .param/l "BOUND" 1 3 17, +C4<00000000000000000100000000000000>;
+P_00000205B838BEA8 .param/l "FRAC" 1 3 16, +C4<00000000000000000000000000001011>;
+P_00000205B838BEE0 .param/real "SCALE" 1 3 18, Cr<m4000000000000000gfcd>; value=2048.00
+P_00000205B838BF18 .param/l "STEP" 1 3 19, +C4<00000000000000000000000000000001>;
+v00000205B83932A0_0 .net/s *"_ivl_0", 31 0, L_00000205BA22ED30;  1 drivers
+v00000205B8393340_0 .net *"_ivl_10", 0 0, L_00000205BA22E470;  1 drivers
+L_00000205BA22F450 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v00000205B83933E0_0 .net/2u *"_ivl_12", 1 0, L_00000205BA22F450;  1 drivers
+v00000205B83917C0_0 .net/s *"_ivl_14", 31 0, L_00000205BA22D9D0;  1 drivers
+L_00000205BA22F498 .functor BUFT 1, C4<00000000000000000100000000000000>, C4<0>, C4<0>, C4<0>;
+v00000205B8393520_0 .net/2s *"_ivl_16", 31 0, L_00000205BA22F498;  1 drivers
+v00000205B8392120_0 .net *"_ivl_18", 0 0, L_00000205BA22E510;  1 drivers
+L_00000205BA22F4E0 .functor BUFT 1, C4<10>, C4<0>, C4<0>, C4<0>;
+v00000205B8391EA0_0 .net/2u *"_ivl_20", 1 0, L_00000205BA22F4E0;  1 drivers
+L_00000205BA22F528 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v00000205B83935C0_0 .net/2u *"_ivl_22", 1 0, L_00000205BA22F528;  1 drivers
+v00000205B8391F40_0 .net *"_ivl_24", 1 0, L_00000205BA22E010;  1 drivers
+v00000205B8392300_0 .net *"_ivl_29", 0 0, L_00000205BA22DA70;  1 drivers
+v00000205B83924E0_0 .net *"_ivl_3", 31 0, L_00000205BA22EDD0;  1 drivers
+v00000205BA22E150_0 .net *"_ivl_30", 16 0, L_00000205BA22E290;  1 drivers
+v00000205BA22E970_0 .net *"_ivl_33", 0 0, L_00000205BA22EF10;  1 drivers
+v00000205BA22D390_0 .net *"_ivl_34", 16 0, L_00000205BA22D110;  1 drivers
+v00000205BA22D1B0_0 .net *"_ivl_39", 0 0, L_00000205BA22D890;  1 drivers
+L_00000205BA22F570 .functor BUFT 1, C4<00000000000000000>, C4<0>, C4<0>, C4<0>;
+v00000205BA22E3D0_0 .net *"_ivl_40", 16 0, L_00000205BA22F570;  1 drivers
+v00000205BA22D610_0 .net *"_ivl_43", 16 0, L_00000205BA289260;  1 drivers
+v00000205BA22DBB0_0 .net *"_ivl_46", 16 0, L_00000205BA2896C0;  1 drivers
+L_00000205BA22F5B8 .functor BUFT 1, C4<0000000000000>, C4<0>, C4<0>, C4<0>;
+v00000205BA22DE30_0 .net *"_ivl_49", 12 0, L_00000205BA22F5B8;  1 drivers
+v00000205BA22EFB0_0 .net/s *"_ivl_6", 31 0, L_00000205BA22D2F0;  1 drivers
+L_00000205BA22F408 .functor BUFT 1, C4<11111111111111111100000000000000>, C4<0>, C4<0>, C4<0>;
+v00000205BA22DCF0_0 .net/2s *"_ivl_8", 31 0, L_00000205BA22F408;  1 drivers
+v00000205BA22E790_0 .net "abs_diff", 16 0, L_00000205BA289580;  1 drivers
+v00000205BA22E5B0_0 .var "clk", 0 0;
+v00000205BA22EB50_0 .net/s "diff", 16 0, L_00000205BA22D7F0;  1 drivers
+v00000205BA22D6B0_0 .var/i "err_cnt", 31 0;
+v00000205BA22E0B0_0 .var/i "log_fd", 31 0;
+v00000205BA22D430_0 .var/i "max_err", 31 0;
+v00000205BA22E650_0 .var/i "max_err_at", 31 0;
+v00000205BA22D4D0_0 .net "mismatch", 0 0, L_00000205BA289D00;  1 drivers
+v00000205BA22E330_0 .net "region", 1 0, L_00000205BA22E1F0;  1 drivers
+v00000205BA22E6F0_0 .var "rst_n", 0 0;
+v00000205BA22DC50_0 .var "tol", 3 0;
+v00000205BA22DB10_0 .var/i "total", 31 0;
+v00000205BA22DED0_0 .var/s "x", 15 0;
+v00000205BA22DD90_0 .net/s "y", 15 0, v00000205B8391E00_0;  1 drivers
+v00000205BA22D570_0 .net/s "y_exp", 15 0, L_00000205BA22D930;  1 drivers
+E_00000205B83B5720 .event anyedge, v00000205BA22E330_0;
+L_00000205BA22ED30 .extend/s 32, v00000205BA22DED0_0;
+L_00000205BA22EDD0 .ufunc/vec4 TD_tb_silu.silu_ref, 32, L_00000205BA22ED30 (v00000205B8391720_0) S_00000205B8360890;
+L_00000205BA22D930 .part L_00000205BA22EDD0, 0, 16;
+L_00000205BA22D2F0 .extend/s 32, v00000205BA22DED0_0;
+L_00000205BA22E470 .cmp/ge.s 32, L_00000205BA22F408, L_00000205BA22D2F0;
+L_00000205BA22D9D0 .extend/s 32, v00000205BA22DED0_0;
+L_00000205BA22E510 .cmp/ge.s 32, L_00000205BA22D9D0, L_00000205BA22F498;
+L_00000205BA22E010 .functor MUXZ 2, L_00000205BA22F528, L_00000205BA22F4E0, L_00000205BA22E510, C4<>;
+L_00000205BA22E1F0 .functor MUXZ 2, L_00000205BA22E010, L_00000205BA22F450, L_00000205BA22E470, C4<>;
+L_00000205BA22DA70 .part v00000205B8391E00_0, 15, 1;
+L_00000205BA22E290 .concat [ 16 1 0 0], v00000205B8391E00_0, L_00000205BA22DA70;
+L_00000205BA22EF10 .part L_00000205BA22D930, 15, 1;
+L_00000205BA22D110 .concat [ 16 1 0 0], L_00000205BA22D930, L_00000205BA22EF10;
+L_00000205BA22D7F0 .arith/sub 17, L_00000205BA22E290, L_00000205BA22D110;
+L_00000205BA22D890 .part L_00000205BA22D7F0, 16, 1;
+L_00000205BA289260 .arith/sub 17, L_00000205BA22F570, L_00000205BA22D7F0;
+L_00000205BA289580 .functor MUXZ 17, L_00000205BA22D7F0, L_00000205BA289260, L_00000205BA22D890, C4<>;
+L_00000205BA2896C0 .concat [ 4 13 0 0], v00000205BA22DC50_0, L_00000205BA22F5B8;
+L_00000205BA289D00 .cmp/gt 17, L_00000205BA289580, L_00000205BA2896C0;
+S_00000205B8360700 .scope begin, "scan" "scan" 3 94, 3 94 0, S_00000205B8360570;
+ .timescale -9 -12;
+v00000205B8393480_0 .var/i "d", 31 0;
+v00000205B8391FE0_0 .var/i "i", 31 0;
+v00000205B8392D00_0 .var/i "ye", 31 0;
+v00000205B8391900_0 .var/i "yi", 31 0;
+E_00000205B83B57E0 .event posedge, v00000205B83930C0_0;
+E_00000205B83B5820 .event negedge, v00000205B83930C0_0;
+S_00000205B8360890 .scope function.vec4.u32, "silu_ref" "silu_ref" 3 26, 3 26 0, S_00000205B8360570;
+ .timescale -9 -12;
+v00000205B8391A40_0 .var/real "scaled", 0 0;
+; Variable silu_ref is vec4 return value of scope S_00000205B8360890
+v00000205B8391720_0 .var/i "xi", 31 0;
+v00000205B8392080_0 .var/real "xr", 0 0;
+v00000205B83919A0_0 .var/real "yr", 0 0;
+TD_tb_silu.silu_ref ;
+    %load/vec4 v00000205B8391720_0;
+    %cvt/rv/s;
+    %pushi/real 1073741824, 4077; load=2048.00
+    %div/wr;
+    %store/real v00000205B8392080_0;
+    %load/real v00000205B8392080_0;
+    %pushi/real 1073741824, 4066; load=1.00000
+    %load/real v00000205B8392080_0;
+    %neg/wr;
+    %vpi_func/r 3 31 "$exp", W<0,r> {0 1 0};
+    %add/wr;
+    %div/wr;
+    %store/real v00000205B83919A0_0;
+    %load/real v00000205B83919A0_0;
+    %pushi/real 1073741824, 4077; load=2048.00
+    %mul/wr;
+    %store/real v00000205B8391A40_0;
+    %pushi/real 0, 4065; load=0.00000
+    %load/real v00000205B8391A40_0;
+    %cmp/wr;
+    %flag_or 5, 4;
+    %jmp/0xz  T_0.0, 5;
+    %load/real v00000205B8391A40_0;
+    %pushi/real 1073741824, 4065; load=0.500000
+    %add/wr;
+    %vpi_func/r 3 34 "$floor", W<0,r> {0 1 0};
+    %vpi_func 3 34 "$rtoi" 32, W<0,r> {0 1 0};
+    %ret/vec4 0, 0, 32;  Assign to silu_ref (store_vec4_to_lval)
+    %jmp T_0.1;
+T_0.0 ;
+    %load/real v00000205B8391A40_0;
+    %pushi/real 1073741824, 4065; load=0.500000
+    %sub/wr;
+    %vpi_func/r 3 36 "$ceil", W<0,r> {0 1 0};
+    %vpi_func 3 36 "$rtoi" 32, W<0,r> {0 1 0};
+    %ret/vec4 0, 0, 32;  Assign to silu_ref (store_vec4_to_lval)
+T_0.1 ;
+    %end;
+S_00000205B83B8700 .scope module, "u_silu" "silu" 3 13, 4 2 0, S_00000205B8360570;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 16 "x";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /INPUT 1 "rst_n";
+    .port_info 3 /OUTPUT 16 "y";
+P_00000205B83B6410 .param/l "BOUND" 0 4 13, +C4<0000000000000000000000000000100000000000000>;
+P_00000205B83B6448 .param/l "DEPTH" 0 4 14, +C4<000000000000000000000000000000000000000000000000000000000001000000000000000>;
+P_00000205B83B6480 .param/l "FRAC" 0 4 8, +C4<00000000000000000000000000001011>;
+P_00000205B83B64B8 .param/str "LUT_FILE" 0 4 12, "silu_lut_q11.hex";
+v00000205B8392800_0 .net/s *"_ivl_0", 42 0, L_00000205BA22E830;  1 drivers
+v00000205B8392EE0_0 .net *"_ivl_13", 0 0, L_00000205BA22EA10;  1 drivers
+v00000205B83923A0_0 .net *"_ivl_14", 16 0, L_00000205BA22EAB0;  1 drivers
+v00000205B8392620_0 .net *"_ivl_16", 42 0, L_00000205BA22D750;  1 drivers
+L_00000205BA22F378 .functor BUFT 1, C4<00000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v00000205B8392E40_0 .net *"_ivl_19", 25 0, L_00000205BA22F378;  1 drivers
+L_00000205BA22F2E8 .functor BUFT 1, C4<0000000000000000000000000000100000000000000>, C4<0>, C4<0>, C4<0>;
+v00000205B8391CC0_0 .net/2s *"_ivl_2", 42 0, L_00000205BA22F2E8;  1 drivers
+L_00000205BA22F3C0 .functor BUFT 1, C4<0000000000000000000000000000100000000000000>, C4<0>, C4<0>, C4<0>;
+v00000205B8392760_0 .net/2u *"_ivl_20", 42 0, L_00000205BA22F3C0;  1 drivers
+v00000205B8391AE0_0 .net *"_ivl_22", 42 0, L_00000205BA22EE70;  1 drivers
+v00000205B8393020_0 .net/s *"_ivl_6", 42 0, L_00000205BA22EBF0;  1 drivers
+L_00000205BA22F330 .functor BUFT 1, C4<1111111111111111111111111111100000000000000>, C4<0>, C4<0>, C4<0>;
+v00000205B83921C0_0 .net/2s *"_ivl_8", 42 0, L_00000205BA22F330;  1 drivers
+v00000205B8392B20_0 .net "addr", 14 0, L_00000205BA22DF70;  1 drivers
+v00000205B8392940_0 .net/s "addr_full", 16 0, L_00000205BA22D250;  1 drivers
+v00000205B83930C0_0 .net "clk", 0 0, v00000205BA22E5B0_0;  1 drivers
+v00000205B8393200 .array "rom", 32767 0, 15 0;
+v00000205B8391B80_0 .net "rst_n", 0 0, v00000205BA22E6F0_0;  1 drivers
+v00000205B83926C0_0 .net "sat_neg", 0 0, L_00000205BA22EC90;  1 drivers
+v00000205B8392440_0 .net "sat_pos", 0 0, L_00000205BA22E8D0;  1 drivers
+v00000205B8391D60_0 .net/s "x", 15 0, v00000205BA22DED0_0;  1 drivers
+v00000205B8391E00_0 .var/s "y", 15 0;
+E_00000205B83B4720/0 .event negedge, v00000205B8391B80_0;
+E_00000205B83B4720/1 .event posedge, v00000205B83930C0_0;
+E_00000205B83B4720 .event/or E_00000205B83B4720/0, E_00000205B83B4720/1;
+L_00000205BA22E830 .extend/s 43, v00000205BA22DED0_0;
+L_00000205BA22E8D0 .cmp/ge.s 43, L_00000205BA22E830, L_00000205BA22F2E8;
+L_00000205BA22EBF0 .extend/s 43, v00000205BA22DED0_0;
+L_00000205BA22EC90 .cmp/ge.s 43, L_00000205BA22F330, L_00000205BA22EBF0;
+L_00000205BA22EA10 .part v00000205BA22DED0_0, 15, 1;
+L_00000205BA22EAB0 .concat [ 16 1 0 0], v00000205BA22DED0_0, L_00000205BA22EA10;
+L_00000205BA22D750 .concat [ 17 26 0 0], L_00000205BA22EAB0, L_00000205BA22F378;
+L_00000205BA22EE70 .arith/sum 43, L_00000205BA22D750, L_00000205BA22F3C0;
+L_00000205BA22D250 .part L_00000205BA22EE70, 0, 17;
+L_00000205BA22DF70 .part L_00000205BA22D250, 0, 15;
+    .scope S_00000205B83B8700;
+T_1 ;
+    %vpi_call/w 4 19 "$readmemh", P_00000205B83B64B8, v00000205B8393200 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_00000205B83B8700;
+T_2 ;
+    %wait E_00000205B83B4720;
+    %load/vec4 v00000205B8391B80_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v00000205B8391E00_0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/vec4 v00000205B83926C0_0;
+    %pad/u 32;
+    %cmpi/e 1, 0, 32;
+    %jmp/0xz  T_2.2, 4;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v00000205B8391E00_0, 0;
+    %jmp T_2.3;
+T_2.2 ;
+    %load/vec4 v00000205B8392440_0;
+    %pad/u 32;
+    %cmpi/e 1, 0, 32;
+    %jmp/0xz  T_2.4, 4;
+    %load/vec4 v00000205B8391D60_0;
+    %assign/vec4 v00000205B8391E00_0, 0;
+    %jmp T_2.5;
+T_2.4 ;
+    %load/vec4 v00000205B8392B20_0;
+    %pad/u 17;
+    %ix/vec4 4;
+    %load/vec4a v00000205B8393200, 4;
+    %assign/vec4 v00000205B8391E00_0, 0;
+T_2.5 ;
+T_2.3 ;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_00000205B8360570;
+T_3 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000205BA22E5B0_0, 0, 1;
+    %end;
+    .thread T_3;
+    .scope S_00000205B8360570;
+T_4 ;
+    %delay 5000, 0;
+    %load/vec4 v00000205BA22E5B0_0;
+    %inv;
+    %store/vec4 v00000205BA22E5B0_0, 0, 1;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_00000205B8360570;
+T_5 ;
+    %wait E_00000205B83B5720;
+    %load/vec4 v00000205BA22E330_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 2;
+    %cmp/e;
+    %jmp/1 T_5.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 2;
+    %cmp/e;
+    %jmp/1 T_5.1, 6;
+    %dup/vec4;
+    %pushi/vec4 2, 0, 2;
+    %cmp/e;
+    %jmp/1 T_5.2, 6;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v00000205BA22DC50_0, 0, 4;
+    %jmp T_5.4;
+T_5.0 ;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v00000205BA22DC50_0, 0, 4;
+    %jmp T_5.4;
+T_5.1 ;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v00000205BA22DC50_0, 0, 4;
+    %jmp T_5.4;
+T_5.2 ;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v00000205BA22DC50_0, 0, 4;
+    %jmp T_5.4;
+T_5.4 ;
+    %pop/vec4 1;
+    %jmp T_5;
+    .thread T_5, $push;
+    .scope S_00000205B8360570;
+T_6 ;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v00000205BA22DED0_0, 0, 16;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000205BA22E6F0_0, 0, 1;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000205BA22D6B0_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000205BA22DB10_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000205BA22D430_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000205BA22E650_0, 0, 32;
+    %vpi_func 3 80 "$fopen" 32, "sim.log", "w" {0 0 0};
+    %store/vec4 v00000205BA22E0B0_0, 0, 32;
+    %load/vec4 v00000205BA22E0B0_0;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_6.0, 4;
+    %vpi_call/w 3 82 "$display", "[FATAL] cannot open sim.log" {0 0 0};
+    %vpi_call/w 3 83 "$finish" {0 0 0};
+T_6.0 ;
+    %pushi/vec4 3, 0, 32;
+T_6.2 %dup/vec4;
+    %cmpi/s 0, 0, 32;
+    %jmp/1xz T_6.3, 5;
+    %jmp/1 T_6.3, 4;
+    %subi 1, 0, 32;
+    %wait E_00000205B83B57E0;
+    %jmp T_6.2;
+T_6.3 ;
+    %pop/vec4 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000205BA22E6F0_0, 0, 1;
+    %wait E_00000205B83B57E0;
+    %delay 1000, 0;
+    %vpi_call/w 3 90 "$display", "=== SiLU ROM test start ===" {0 0 0};
+    %vpi_call/w 3 91 "$fwrite", v00000205BA22E0B0_0, "=== SiLU ROM test ===\012" {0 0 0};
+    %fork t_1, S_00000205B8360700;
+    %jmp t_0;
+    .scope S_00000205B8360700;
+t_1 ;
+    %pushi/vec4 4294934528, 0, 32;
+    %store/vec4 v00000205B8391FE0_0, 0, 32;
+T_6.4 ; Top of for-loop
+    %load/vec4 v00000205B8391FE0_0;
+    %cmpi/s 32767, 0, 32;
+    %flag_or 5, 4;
+	  %jmp/0xz T_6.5, 5;
+    %wait E_00000205B83B5820;
+    %load/vec4 v00000205B8391FE0_0;
+    %pad/s 16;
+    %store/vec4 v00000205BA22DED0_0, 0, 16;
+    %wait E_00000205B83B57E0;
+    %delay 1000, 0;
+    %load/vec4 v00000205BA22DD90_0;
+    %pad/s 32;
+    %store/vec4 v00000205B8391900_0, 0, 32;
+    %load/vec4 v00000205B8391FE0_0;
+    %store/vec4 v00000205B8391720_0, 0, 32;
+    %callf/vec4 TD_tb_silu.silu_ref, S_00000205B8360890;
+    %store/vec4 v00000205B8392D00_0, 0, 32;
+    %load/vec4 v00000205B8391900_0;
+    %load/vec4 v00000205B8392D00_0;
+    %sub;
+    %store/vec4 v00000205B8393480_0, 0, 32;
+    %load/vec4 v00000205B8393480_0;
+    %cmpi/s 0, 0, 32;
+    %jmp/0xz  T_6.7, 5;
+    %load/vec4 v00000205B8393480_0;
+    %inv;
+    %addi 1, 0, 32;
+    %store/vec4 v00000205B8393480_0, 0, 32;
+T_6.7 ;
+    %load/vec4 v00000205BA22DB10_0;
+    %addi 1, 0, 32;
+    %store/vec4 v00000205BA22DB10_0, 0, 32;
+    %load/vec4 v00000205BA22D430_0;
+    %load/vec4 v00000205B8393480_0;
+    %cmp/s;
+    %jmp/0xz  T_6.9, 5;
+    %load/vec4 v00000205B8393480_0;
+    %store/vec4 v00000205BA22D430_0, 0, 32;
+    %load/vec4 v00000205B8391FE0_0;
+    %store/vec4 v00000205BA22E650_0, 0, 32;
+T_6.9 ;
+    %load/vec4 v00000205BA22DC50_0;
+    %pad/u 17;
+    %load/vec4 v00000205BA22E790_0;
+    %cmp/u;
+    %jmp/0xz  T_6.11, 5;
+    %load/vec4 v00000205BA22D6B0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v00000205BA22D6B0_0, 0, 32;
+    %load/vec4 v00000205B8391FE0_0;
+    %cvt/rv/s;
+    %pushi/real 1073741824, 4077; load=2048.00
+    %div/wr;
+    %vpi_call/w 3 115 "$display", "[MISMATCH] x=%0d (%f) hw=%0d exp=%0d diff=%0d tol=%0d region=%0d", v00000205B8391FE0_0, W<0,r>, v00000205B8391900_0, v00000205B8392D00_0, v00000205BA22E790_0, v00000205BA22DC50_0, v00000205BA22E330_0 {0 1 0};
+    %vpi_call/w 3 117 "$fwrite", v00000205BA22E0B0_0, "MISMATCH x=%0d hw=%0d exp=%0d diff=%0d region=%0d\012", v00000205B8391FE0_0, v00000205B8391900_0, v00000205B8392D00_0, v00000205BA22E790_0, v00000205BA22E330_0 {0 0 0};
+T_6.11 ;
+T_6.6 ; for-loop step statement
+    %load/vec4 v00000205B8391FE0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v00000205B8391FE0_0, 0, 32;
+    %jmp T_6.4;
+T_6.5 ; for-loop exit label
+    %end;
+    .scope S_00000205B8360570;
+t_0 %join;
+    %vpi_call/w 3 123 "$display", "=== SUMMARY ===" {0 0 0};
+    %vpi_call/w 3 124 "$display", " total    : %0d", v00000205BA22DB10_0 {0 0 0};
+    %vpi_call/w 3 125 "$display", " mismatch : %0d", v00000205BA22D6B0_0 {0 0 0};
+    %vpi_call/w 3 126 "$display", " max_err  : %0d LSB @ x=%0d", v00000205BA22D430_0, v00000205BA22E650_0 {0 0 0};
+    %vpi_call/w 3 127 "$fwrite", v00000205BA22E0B0_0, "=== SUMMARY ===\012total=%0d mismatch=%0d max_err=%0d @x=%0d\012", v00000205BA22DB10_0, v00000205BA22D6B0_0, v00000205BA22D430_0, v00000205BA22E650_0 {0 0 0};
+    %load/vec4 v00000205BA22D6B0_0;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_6.13, 4;
+    %vpi_call/w 3 130 "$display", "*** PASS ***" {0 0 0};
+    %jmp T_6.14;
+T_6.13 ;
+    %vpi_call/w 3 131 "$display", "*** FAIL ***" {0 0 0};
+T_6.14 ;
+    %vpi_call/w 3 133 "$fclose", v00000205BA22E0B0_0 {0 0 0};
+    %vpi_call/w 3 134 "$finish" {0 0 0};
+    %end;
+    .thread T_6;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_silu.v";
+    "silu.v";
